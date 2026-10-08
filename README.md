@@ -20,7 +20,7 @@ Typewriter role animation, personal summary, location, availability badge, call-
 ---
 
 ### 2. About Me & Education
-Developer background summary, MCA (Pursuing, Zeal Institute), BCA (7.70 CGPA, Dr. D.Y. Patil College), location, and quick fact cards.
+Developer background summary, location, and quick fact cards.
 
 ![About Me](assets/About.png)
 
@@ -41,7 +41,7 @@ Interactive project cards with category filter tabs (`All Projects`, `Java & Spr
 ---
 
 ### 5. Milestones & Experience Timeline
-Chronological timeline of education (MCA, BCA, HSC, SSC) and full-stack development performance-based internship at VINIX Technologies.
+Chronological timeline of education.
 
 ![Timeline Section](assets/millestones.png)
 
