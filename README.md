@@ -11,58 +11,6 @@
 
 Production-ready, modern Full Stack Developer Portfolio & Technical Case Studies website built for **Sandesh Virupakshayya Hiremath** (Full Stack Developer & Java Spring Boot Enthusiast based in Pune, India).
 
----
-
-## 📸 Portfolio UI Section Screenshots
-
-### 1. Hero Section Banner
-Typewriter role animation, personal summary, location, availability badge, call-to-action buttons (`View Projects`, `Download CV`), and interactive code card overlay.
-
-![Hero Section](assets/Hero.png)
-
----
-
-### 2. About Me & Education
-Developer background summary, location, and quick fact cards.
-
-![About Me](assets/About.png)
-
----
-
-### 3. Technical Skills & Expertise
-Categorized skill badges across Frontend, Backend & APIs, Databases & Analytics, and Tools & Workflow.
-
-![Skills Section](assets/skiils.png)
-
----
-
-### 4. Featured Projects Grid
-Interactive project cards with category filter tabs (`All Projects`, `Java & Spring Boot`, `Web Application`) and case study links.
-
-![Projects Section](assets/Projects.png)
-
----
-
-### 5. Milestones & Experience Timeline
-Chronological timeline of education.
-
-![Timeline Section](assets/millestones.png)
-
----
-
-### 6. Certifications & Achievements
-Verified industry certifications including Deloitte Australia Data Analytics Simulation, Game-O-Thon 2026, Simplilearn Generative AI, CSS/JS, and AWS Cloud Practitioner Essentials.
-
-![Certifications Section](assets/certificate.png)
-
----
-
-### 7. Footer & Quick Links
-Footer layout with social profile links (GitHub, LinkedIn, Email), brand logo, and smooth back-to-top navigation.
-
-![Footer Section](assets/footer.png)
-
----
 
 ## 🛠️ Featured Projects & Case Studies
 
