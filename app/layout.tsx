@@ -18,7 +18,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://sandesh-hiremath-portfolio.vercel.app'),
+  metadataBase: new URL('https://commitwithsandy.vercel.app'),
   title: '</> Sandesh Hiremath',
   description: `${portfolioData.personalInfo.shortBio} Full Stack Developer skilled in MERN stack, Java Spring Boot, React, Next.js, and Cloud deployments.`,
   icons: {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://sandesh-hiremath-portfolio.vercel.app',
+    url: 'https://commitwithsandy.vercel.app',
     title: `${portfolioData.personalInfo.name} — Full Stack Developer`,
     description: portfolioData.personalInfo.shortBio,
     siteName: `${portfolioData.personalInfo.name} Portfolio`,

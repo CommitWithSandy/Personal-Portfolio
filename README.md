@@ -1,10 +1,13 @@
 # 🚀 Sandesh Hiremath — Personal Portfolio & Technical Case Studies
 
+[![Live Demo](https://img.shields.io/badge/Live_Portfolio-commitwithsandy.vercel.app-00f0ff?style=for-the-badge&logo=vercel&logoColor=white)](https://commitwithsandy.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+
+> 🌐 **Live Portfolio Website**: [https://commitwithsandy.vercel.app/](https://commitwithsandy.vercel.app/)
 
 Production-ready, modern Full Stack Developer Portfolio & Technical Case Studies website built for **Sandesh Virupakshayya Hiremath** (Full Stack Developer & Java Spring Boot Enthusiast based in Pune, India).
 
@@ -185,6 +188,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - **Email**: hiremathsandesh14@gmail.com
 - **Phone**: +91-9890154604
 - **Location**: Pune, Maharashtra, India
+- **Live Website**: [https://commitwithsandy.vercel.app/](https://commitwithsandy.vercel.app/)
 - **GitHub**: [github.com/CommitWithSandy](https://github.com/CommitWithSandy)
 - **LinkedIn**: [linkedin.com/in/sandesh-hiremath/](https://linkedin.com/in/sandesh-hiremath/)
 
