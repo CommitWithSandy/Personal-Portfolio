@@ -6,6 +6,13 @@ import { Award, CheckCircle, ExternalLink, ShieldCheck } from 'lucide-react';
 export function Certifications() {
   const certifications = [
     {
+      title: 'Elite Tech Internship — API Integration (Task 1)',
+      issuer: 'Elite Tech Intern Program',
+      date: '2026',
+      badge: 'Internship Project',
+      description: 'Engineered PulseSphere — Real-Time Weather & Atmosphere Intelligence Hub utilizing Vanilla ES6+, CSS3 Glassmorphism, and Open-Meteo REST APIs.',
+    },
+    {
       title: 'Deloitte Australia Data Analytics Job Simulation',
       issuer: 'Forage / Deloitte',
       date: '2026',

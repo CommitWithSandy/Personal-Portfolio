@@ -19,8 +19,13 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sandesh-hiremath-portfolio.vercel.app'),
-  title: `${portfolioData.personalInfo.name} — Full Stack Developer (Fresher)`,
+  title: '</> Sandesh Hiremath',
   description: `${portfolioData.personalInfo.shortBio} Full Stack Developer skilled in MERN stack, Java Spring Boot, React, Next.js, and Cloud deployments.`,
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   keywords: [
     'Sandesh Hiremath',
     'Full Stack Developer',

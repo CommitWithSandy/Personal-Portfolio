@@ -90,6 +90,28 @@ const PROJECTS_DATA = [
     ],
     liveUrl: "https://github.com/CommitWithSandy",
     githubUrl: "https://github.com/CommitWithSandy"
+  },
+  {
+    id: "project-5",
+    title: "PulseSphere — Weather & Atmosphere Hub",
+    category: "webapps",
+    number: "05",
+    shortDesc: "Real-time weather and atmospheric intelligence hub built with Vanilla JS (ES6+), CSS3 Glassmorphism, and Open-Meteo REST APIs.",
+    image: "assets/pulsesphere.png",
+    tags: ["JavaScript (ES6+)", "HTML5", "CSS3 Glassmorphism", "Open-Meteo API", "REST APIs"],
+    metrics: [
+      { label: "APIs Integrated", value: "3 Public APIs" },
+      { label: "Architecture", value: "Vanilla ES6+" },
+      { label: "Performance", value: "< 200ms Load" }
+    ],
+    detailedOverview: "PulseSphere is a production-grade atmospheric intelligence hub built for Elite Tech Internship Task 1. Connects to Open-Meteo Forecast, Air Quality, and Geocoding APIs to deliver real-time meteorological metrics, condition-adaptive cosmic glow themes, 6 atmospheric gauges (UV, AQI PM2.5/PM10, wind compass, pressure, sun arc), 24-hour SVG bezier curves, and offline caching.",
+    architecture: [
+      "Modular Vanilla JavaScript ES6+ Service and UI Controller patterns with zero npm framework dependencies.",
+      "Multi-endpoint asynchronous orchestration connecting Open-Meteo Forecast, Air Quality, and Geocoding APIs.",
+      "Dynamic CSS custom properties for ambient weather glow morphing and reactive SVG vector gauge animations."
+    ],
+    liveUrl: "https://github.com/CommitWithSandy/ELiteTEch-Intern.git",
+    githubUrl: "https://github.com/CommitWithSandy/ELiteTEch-Intern.git"
   }
 ];
 

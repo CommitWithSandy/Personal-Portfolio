@@ -1,0 +1,199 @@
+%-------------------------
+% Resume in LaTeX
+% Updated for: Sandesh Virupakshayya Hiremath
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+% ---------------- PACKAGES ----------------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+\ifpdf
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+% ---------------- COLORS ----------------
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+
+\colorlet{name}{black}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{body}{LightGrey}
+
+% ---------------- PAGE SETUP ----------------
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% ---------------- SECTION FORMAT ----------------
+\titleformat{\section}
+{\vspace{-4pt}\scshape\raggedright\large\bfseries}
+{}
+{0em}
+{}
+[\color{black}\titlerule \vspace{-5pt}]
+
+% ---------------- CUSTOM COMMANDS ----------------
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{\large #1} & \textbf{\small #2} \\
+    \textit{\large #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+    \small #1 & \textbf{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% ---------------- DOCUMENT ----------------
+\begin{document}
+
+% ---------- HEADER ----------
+\begin{center}
+     {\Huge \scshape Sandesh Virupakshayya Hiremath} \\ \vspace{2pt}
+    Pune, India \\ \vspace{4pt}
+    \small
+    \faPhone\ +91-9890154604 \quad
+    \faEnvelope\ \href{mailto:hiremathsandesh14@gmail.com}{hiremathsandesh14@gmail.com} \quad
+    \faGithub\ \href{https://github.com/CommitWithSandy}{github.com/CommitWithSandy} \quad
+    
+    \faLinkedin\ \href{https://www.linkedin.com/in/sandesh-hiremath/}{linkedin.com/in/sandesh-hiremath/}
+\end{center}
+% ---------- Summary ----------
+\section{Summary}
+\large{
+Final-year student and aspiring software developer seeking an entry-level opportunity to start a professional career. Eager to learn, work on real-world projects, and contribute effectively in a team environment.
+}
+\section{SKILLS}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \normalsize{\item{
+    \textbf{Programming Languages:} Java, Python, JavaScript, SQL \\[2pt]
+    \textbf{Frontend Technologies:} HTML5, CSS3, JavaScript, React \\[2pt]
+    \textbf{Tools:} VS Code, GitHub, Figma \\[2pt]
+    \textbf{CS Fundamentals:} Data Structures \& Algorithms, DBMS, Operating Systems, Object-Oriented Programming, Computer Networks
+  }}
+\end{itemize}
+
+% ---------- EDUCATION ----------
+\section{EDUCATION}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Zeal Institute of Business Administration, Computer Application \& Research}
+    {2025 -- 2027}
+    {Master of Computer Applications (MCA) \textbf{(Pursuing)}}
+    {Pune, India}
+  \vspace{2pt}
+
+  \resumeSubheading
+    {Dr. D. Y. Patil Arts, Commerce and Science College}
+    {2022 -- 2025}
+    {Bachelor of Computer Applications (BCA) \textbf{(CGPA: 7.70)}}
+    {Pune, India}
+  \vspace{2pt}
+
+  \resumeSubheading
+    {Jath High School, Jath}
+    {2019 -- 2021}
+    {Higher Secondary Certificate (HSC) \textbf{(72.83\%)}}
+    {Jath, Sangli, India}
+  \vspace{2pt}
+
+  \resumeSubheading
+    {Jath High School, Jath}
+    {2018 -- 2019}
+    {Secondary School Certificate (SSC) \textbf{(52.20\%)}}
+    {Jath, Sangli, India}
+
+\resumeSubHeadingListEnd
+
+% ---------- EXPERIENCE ----------
+\section{EXPERIENCE}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {\textbf{ELiteTech Intern}}{07-Oct -- Present}
+    {\normalsize{Unpaid (Performance-Based Internship)}}{\normalsize{Virtual}}
+
+  \resumeItemListStart
+    \resumeItem{\normalsize{Executed assigned Full Stack Development tasks and participated in task evaluation.}}
+    \resumeItem{\normalsize{Submitted weekly progress updates while maintaining confidentiality and professional conduct.}}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% ---------- PROJECTS ----------
+\section{ACADEMIC PROJECTS}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Gaming E-Commerce Platform}}{}
+  \resumeItemListStart
+    \resumeItem{\normalsize{Developed a full-stack gaming E-commerce platform using Java, MySQL, HTML5, CSS5, and JavaScript.}}
+    \resumeItem{\normalsize{Implemented secure user registration, login, product browsing, category search, shopping cart, and checkout functionality.}}
+    \resumeItem{\normalsize{Built an admin dashboard to manage products, inventory, order status, and customer orders.}}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Expense Tracker}}{}
+  \resumeItemListStart
+    \resumeItem{\normalsize{Developed a full-stack Expense Tracker Web Application using React, CSS3, HTML5, JavaScript (ES6+) .}}
+    \resumeItem{\normalsize{Implemented month filtering and category-wise budget limit tracking.}}
+    \resumeItem{\normalsize{Developed transaction search, filtering, sorting, and category-based management features.}}
+    \resumeItem{\normalsize{Added visual analytics for expense breakdown and cash-flow trends.}}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% ---------- ACHIEVEMENTS ----------
+\section{ACHIEVEMENTS \& EXTRACURRICULAR}
+\resumeSubHeadingListStart
+
+  \resumeItemListStart
+    \resumeItem{\normalsize{Participant in \textbf{Game-O-thon (GOH) 2026}.}}
+    \resumeItem{\normalsize{Completed certified courses in \textbf{CSS and JavaScript}.}}
+    \resumeItem{\normalsize{Completed certified courses in \textbf{Generative AI}.}}
+    \resumeItem{\normalsize{Completed certified course in \textbf{AWS Cloud Practitioner Essentials}.}}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\end{document}

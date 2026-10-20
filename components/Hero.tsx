@@ -93,7 +93,6 @@ export function Hero() {
               <span>Download CV</span>
               <Download className="w-4 h-4" />
             </a>
-
             {/* Social Links Icons */}
             <div className="flex items-center gap-2 ml-auto sm:ml-0">
               <a

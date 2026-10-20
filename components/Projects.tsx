@@ -3,11 +3,18 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowUpRight, Github, ExternalLink } from 'lucide-react';
+import { ArrowUpRight, Github, ExternalLink, ChevronDown, ChevronUp, AlertCircle, X } from 'lucide-react';
 import { PROJECTS, Project } from '@/data/portfolio';
 
 export function Projects() {
+  const INITIAL_PROJECTS_COUNT = 3;
   const [activeCategory, setActiveCategory] = useState<string>('all');
+  const [showAll, setShowAll] = useState<boolean>(false);
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
+
+  const handleNoLiveDemo = (projectName: string) => {
+    setToastMessage(`No live demo available yet for "${projectName}". Please inspect the GitHub repository or case study for source code!`);
+  };
 
   const categories = [
     { label: 'All Projects', id: 'all' },
@@ -15,10 +22,20 @@ export function Projects() {
     { label: 'Web Application', id: 'webapps' },
   ];
 
+  const handleCategoryChange = (catId: string) => {
+    setActiveCategory(catId);
+    setShowAll(false);
+  };
+
   const filteredProjects =
     activeCategory === 'all'
       ? PROJECTS
       : PROJECTS.filter((p) => p.category === activeCategory);
+
+  const hasMoreProjects = filteredProjects.length > INITIAL_PROJECTS_COUNT;
+  const visibleProjects = showAll
+    ? filteredProjects
+    : filteredProjects.slice(0, INITIAL_PROJECTS_COUNT);
 
   return (
     <section id="projects" className="py-24 bg-secondary/30 relative border-t border-border/50">
@@ -41,7 +58,7 @@ export function Projects() {
           {categories.map((cat) => (
             <button
               key={cat.id}
-              onClick={() => setActiveCategory(cat.id)}
+              onClick={() => handleCategoryChange(cat.id)}
               className={`px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
                 activeCategory === cat.id
                   ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/25'
@@ -55,7 +72,7 @@ export function Projects() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-          {filteredProjects.map((project, idx) => (
+          {visibleProjects.map((project, idx) => (
             <div
               key={project.slug}
               className="group rounded-2xl bg-card border border-border hover:border-indigo-500/50 transition-all overflow-hidden shadow-sm flex flex-col hover:-translate-y-1.5"
@@ -107,6 +124,28 @@ export function Projects() {
                     >
                       <Github className="w-4 h-4" />
                     </a>
+                    {project.liveUrl ? (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/20 hover:border-emerald-500/60 transition-colors relative group/live"
+                        title="Live Demo Available"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                        <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-emerald-500" />
+                      </a>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => handleNoLiveDemo(project.name)}
+                        className="p-2 rounded-lg bg-secondary/60 border border-border/60 text-muted/50 hover:text-amber-400 hover:border-amber-500/40 transition-colors cursor-pointer"
+                        title="No live demo yet (click for details)"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                      </button>
+                    )}
                   </div>
 
                   <Link
@@ -121,7 +160,53 @@ export function Projects() {
             </div>
           ))}
         </div>
+
+        {/* View More / Show Less Projects Toggle Button */}
+        {hasMoreProjects && (
+          <div className="pt-10 flex flex-col items-center justify-center">
+            <button
+              onClick={() => setShowAll((prev) => !prev)}
+              className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full text-sm font-semibold bg-gradient-to-r from-indigo-600 via-indigo-500 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all group cursor-pointer"
+            >
+              <span>
+                {showAll
+                  ? 'Show Less Projects'
+                  : `View More Projects (${filteredProjects.length - INITIAL_PROJECTS_COUNT} More)`}
+              </span>
+              {showAll ? (
+                <ChevronUp className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
+              ) : (
+                <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+              )}
+            </button>
+          </div>
+        )}
       </div>
+
+      {/* Floating Popup Toast Message for No Live Demo */}
+      {toastMessage && (
+        <div className="fixed bottom-6 right-6 z-50 max-w-sm w-[calc(100%-2rem)] sm:w-96 p-4 rounded-2xl bg-slate-900/95 border border-amber-500/40 shadow-2xl backdrop-blur-xl animate-in slide-in-from-bottom-5 fade-in duration-300 text-left">
+          <div className="flex items-start gap-3">
+            <div className="p-2 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 shrink-0 mt-0.5">
+              <AlertCircle className="w-5 h-5" />
+            </div>
+            <div className="space-y-1 flex-1">
+              <h4 className="text-sm font-semibold text-slate-100 flex items-center gap-1.5">
+                <span>No Live Demo Available</span>
+              </h4>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                {toastMessage}
+              </p>
+            </div>
+            <button
+              onClick={() => setToastMessage(null)}
+              className="p-1 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-colors"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

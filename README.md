@@ -98,6 +98,20 @@ Footer layout with social profile links (GitHub, LinkedIn, Email), brand logo, a
 
 ---
 
+### 4. PulseSphere — Real-Time Weather & Atmosphere Intelligence Hub
+- **Repository**: [ELiteTEch-Intern](https://github.com/CommitWithSandy/ELiteTEch-Intern.git)
+- **Tech Stack**: `JavaScript (ES6+)`, `HTML5`, `CSS3 (Glassmorphism)`, `Open-Meteo Forecast API`, `Air Quality API`, `Geocoding API`
+- **Key Features**:
+  - Live atmospheric readings (real-time temp, "feels like", UV index, US AQI PM2.5/PM10, barometric pressure, daylight sun arc, animated wind compass).
+  - Dynamic adaptive ambient cosmic glow backdrop that smoothly shifts hue based on live weather conditions.
+  - 24-Hour hourly trajectory carousel with interactive SVG bezier gradient area curve.
+  - 7-Day extended outlook with visual weekly min/max temperature distribution bars.
+  - Smart debounced geocoding autocomplete, GPS geolocation, offline network connectivity toast, and bookmarked favorites in localStorage.
+
+![PulseSphere Weather & Atmosphere Hub](assets/pulsesphere.png)
+
+---
+
 ## 🛠️ Tech Stack & Architecture
 
 - **Frontend**: Next.js 14 (App Router), React 18, TypeScript, Tailwind CSS, Framer Motion, Lucide React

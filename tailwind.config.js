@@ -11,6 +11,14 @@ module.exports = {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        card: 'var(--card)',
+        'card-foreground': 'var(--card-foreground)',
+        secondary: 'var(--secondary)',
+        'secondary-foreground': 'var(--secondary-foreground)',
+        border: 'var(--border)',
+        muted: 'var(--muted)',
+        primary: 'var(--primary)',
+        accent: 'var(--accent)',
         brand: {
           50: '#eef2ff',
           100: '#e0e7ff',

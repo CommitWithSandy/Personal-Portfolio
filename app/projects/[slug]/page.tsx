@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { portfolioData } from '@/data/portfolio';
-import { ArrowLeft, Github, CheckCircle2, Lightbulb, ShieldAlert, Cpu } from 'lucide-react';
+import { ArrowLeft, Github, CheckCircle2, Lightbulb, ShieldAlert, Cpu, ExternalLink, Image as ImageIcon } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -87,7 +87,7 @@ export default function ProjectCaseStudyPage({ params }: ProjectPageProps) {
               ))}
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <a
                 href={project.githubUrl}
                 target="_blank"
@@ -97,6 +97,17 @@ export default function ProjectCaseStudyPage({ params }: ProjectPageProps) {
                 <Github className="w-4 h-4" />
                 <span>GitHub Code</span>
               </a>
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold bg-blue-600 hover:bg-blue-500 text-white border border-blue-500 transition-all shadow-md shadow-blue-500/20"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  <span>Live Preview</span>
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -155,6 +166,43 @@ export default function ProjectCaseStudyPage({ params }: ProjectPageProps) {
               ))}
             </div>
           </div>
+
+          {/* UI & Feature Showcase */}
+          {project.screenshots && project.screenshots.length > 0 && (
+            <div className="p-8 rounded-2xl bg-slate-900/50 border border-slate-800 space-y-6">
+              <div className="flex items-center gap-3 text-cyan-400 font-bold text-xl">
+                <ImageIcon className="w-6 h-6" />
+                <h2>UI & Feature Showcase</h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {project.screenshots.map((shot, idx) => (
+                  <div
+                    key={idx}
+                    className="group rounded-xl overflow-hidden border border-slate-800 bg-slate-950/70 hover:border-cyan-500/50 transition-all flex flex-col"
+                  >
+                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-900">
+                      <Image
+                        src={shot.image}
+                        alt={shot.title}
+                        fill
+                        className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-4 space-y-1 bg-slate-900/80 border-t border-slate-800">
+                      <h4 className="font-semibold text-slate-200 text-sm group-hover:text-cyan-400 transition-colors">
+                        {shot.title}
+                      </h4>
+                      {shot.caption && (
+                        <p className="text-xs text-slate-400 italic leading-relaxed">
+                          {shot.caption}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Challenges & What I Learned */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

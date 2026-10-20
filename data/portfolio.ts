@@ -1,3 +1,9 @@
+export interface ProjectScreenshot {
+  title: string;
+  image: string;
+  caption?: string;
+}
+
 export interface Project {
   slug: string;
   name: string;
@@ -12,7 +18,8 @@ export interface Project {
   challenges: string[];
   learnings: string[];
   githubUrl: string;
-  liveUrl: string;
+  liveUrl?: string;
+  screenshots?: ProjectScreenshot[];
 }
 
 export interface SkillGroup {
@@ -32,10 +39,11 @@ export interface TimelineItem {
 }
 
 export const PERSONAL_INFO = {
-  name: 'Sandesh Virupakshayya Hiremath',
+  name: 'Sandesh',
   shortName: 'Sandesh Hiremath',
   initials: 'SH',
-  brandLogoText: 'CodeCraft',
+  brandLogoText: 'CodeHomies',
+  logoUrl: '/logo.png',
   title: 'Full Stack Developer (Fresher) | MERN & Java Spring Boot',
   roles: [
     'Full Stack Developer',
@@ -56,7 +64,7 @@ export const PERSONAL_INFO = {
   },
   stats: {
     yearsExp: 'Fresher / 2025 Grad',
-    projectsCompleted: '4+',
+    projectsCompleted: '4',
     clientSatisfaction: '100%'
   }
 };
@@ -87,7 +95,7 @@ export const PROJECTS: Project[] = [
       'Implemented secure user authentication and error-handling middleware'
     ],
     githubUrl: 'https://github.com/CommitWithSandy/S-S-GearZone-Website.git',
-    liveUrl: 'https://github.com/CommitWithSandy/S-S-GearZone-Website.git'
+    // liveUrl: 'https://github.com/CommitWithSandy/S-S-GearZone-Website.git'
   },
   {
     slug: 'expense-tracker',
@@ -114,7 +122,7 @@ export const PROJECTS: Project[] = [
       'Built responsive SaaS dark mode financial dashboard layouts using vanilla CSS variables and Lucide React icons.'
     ],
     githubUrl: 'https://github.com/CommitWithSandy/Expense-Tracker.git',
-    liveUrl: 'https://github.com/CommitWithSandy/Expense-Tracker.git'
+    liveUrl: 'https://expense-tracker-1-r1mr.onrender.com/'
   },
   {
     slug: 'resume-information-extractor',
@@ -141,7 +149,59 @@ export const PROJECTS: Project[] = [
       'Built high-performance React 18 frontend with Vite and responsive SaaS UI component architecture.'
     ],
     githubUrl: 'https://github.com/CommitWithSandy/Resume-Information-Extractor.git',
-    liveUrl: 'https://github.com/CommitWithSandy'
+    // liveUrl: 'https://github.com/CommitWithSandy'
+  },
+  {
+    slug: 'pulsesphere',
+    name: 'PulseSphere — Atmosphere & Weather Hub',
+    tagline: 'Real-time weather & atmospheric intelligence hub featuring live Open-Meteo REST API integrations, dynamic condition-adaptive cosmic glow backdrop, 6 atmospheric gauges, and interactive 24-hour bezier curves.',
+    category: 'webapps',
+    featured: true,
+    image: '/assets/pulsesphere.png',
+    techStack: ['JavaScript (ES6+)', 'HTML5', 'CSS3 (Glassmorphism)', 'Open-Meteo API', 'Air Quality API', 'Geocoding API', 'SVG Graphics', 'LocalStorage'],
+    problem: 'Users frequently face cluttered, ad-heavy weather applications with bloated JavaScript framework footprints, paid API key restrictions, and static numbers that lack visual depth, air quality metrics, or solar progression context.',
+    solution: 'Engineered a high-performance Vanilla ES6+ meteorological intelligence dashboard that loads in under 200ms with zero framework overhead. Connects directly to 3 public Open-Meteo endpoints (Forecast, Air Quality, Geocoding), featuring an ambient cosmic glow backdrop that smoothly shifts hue to match live weather conditions, 6 custom atmospheric gauges, and responsive SVG bezier trajectory charts.',
+    keyFeatures: [
+      'Live Meteorological & Atmospheric Intelligence: Instant readings of current temperature, "feels like" index, daily high/low range, precipitation volume, cloud cover, and wind gusts via Open-Meteo APIs.',
+      'Dynamic Adaptive Ambient Backdrop: Cosmic glow orbs that smoothly morph color palettes based on live conditions (Sunny Amber, Rainy Cyan, Storm Indigo, Snowy Blue).',
+      '6 Core Atmospheric & Environmental Gauges: Animated compass dial rotating to wind degrees, humidity & dew point comfort, graduated UV risk meter, US AQI with PM2.5/PM10 breakdown, barometric pressure gauge, and live daylight sun arc.',
+      '24-Hour Hourly Trajectory & Interactive SVG Curve: Horizontal forecast carousel paired with a smooth bezier gradient area chart plotting hourly temperatures and precipitation probabilities.',
+      '7-Day Extended Weekly Forecast: Visual temperature distribution bars indicating shifts in weekly min/max temperature ranges.',
+      'Smart Search, GPS & Favorites: Real-time debounced geocoding autocomplete, HTML5 GPS geolocation with reverse geocoding, saved favorites persisted in localStorage, and instant Metric/Imperial (°C/km/h vs °F/mph) unit toggling.',
+      'Reliability & Offline Resilience: Network connectivity status toast notifications, client-side caching fallback, and shimmer skeleton loading states during API network round-trips.'
+    ],
+    challenges: [
+      'Engineering custom mathematical algorithms for dynamic SVG bezier curve paths and circular gauge needle angles without external charting libraries.',
+      'Orchestrating concurrent asynchronous requests across Forecast, Air Quality, and Geocoding APIs while preserving seamless offline fallback and debounced input performance.'
+    ],
+    learnings: [
+      'Mastered lightweight, modular Vanilla JavaScript (ES6+) controller architecture with zero framework overhead achieving sub-200ms load times.',
+      'Gained deep experience in advanced CSS glassmorphism, dynamic CSS custom properties, and responsive multi-gauge dashboard design.'
+    ],
+    githubUrl: 'https://github.com/CommitWithSandy/ELiteTEch-Intern.git',
+    // liveUrl: 'https://github.com/CommitWithSandy/ELiteTEch-Intern.git',
+    screenshots: [
+      {
+        title: 'Main Dashboard & Overview',
+        image: '/assets/pulsesphere.png',
+        caption: 'Live weather metrics, dynamic atmospheric backdrop, feels like, daily high/low'
+      },
+      {
+        title: '24-Hour Hourly Trajectory',
+        image: '/assets/pulsesphere-24hr.png',
+        caption: 'Hourly temperature trajectory, condition indicators, precipitation probability'
+      },
+      {
+        title: '7-Day Extended Outlook',
+        image: '/assets/pulsesphere-7day.png',
+        caption: 'Visual weekly min/max temperature distribution bars & weather conditions'
+      },
+      {
+        title: 'Atmospheric Gauges & AQI',
+        image: '/assets/pulsesphere-info.png',
+        caption: 'Animated compass dial, humidity, UV index, US AQI (PM2.5/PM10), pressure & sun arc'
+      }
+    ]
   }
 ];
 
@@ -150,7 +210,7 @@ export const SKILLS_DATA: SkillGroup[] = [
     category: 'Frontend Development',
     skills: [
       { name: 'HTML5', level: 95, icon: 'FileCode' },
-      { name: 'CSS3 / Tailwind', level: 90, icon: 'Palette' },
+      { name: 'CSS3', level: 90, icon: 'Palette' },
       { name: 'JavaScript (ES6+)', level: 90, icon: 'Code' },
       { name: 'React.js', level: 90, icon: 'Atom' },
     ]
@@ -183,6 +243,15 @@ export const SKILLS_DATA: SkillGroup[] = [
 ];
 
 export const TIMELINE_DATA: TimelineItem[] = [
+  {
+    id: 'elite-tech-internship',
+    year: '2026',
+    title: 'Elite Tech Full Stack Development Internship',
+    organization: 'Elite Tech Intern Program',
+    location: 'Remote',
+    description: 'T1- PulseSphere — Real-Time Weather & Atmosphere Intelligence Hub ',
+    type: 'achievement',
+  },
   {
     id: 'game-o-thon',
     year: '2026',
@@ -219,6 +288,7 @@ export const portfolioData = {
     features: p.keyFeatures,
     whatILearned: p.learnings ? p.learnings.join('. ') : '',
     challenges: p.challenges ? p.challenges.join('. ') : '',
+    screenshots: p.screenshots || [],
   })),
   skills: SKILLS_DATA.map((sg) => ({
     category: sg.category,
